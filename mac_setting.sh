@@ -115,7 +115,14 @@ function setvim(){
 	ln -s ~/.vim/vimwiki ~/vimwiki
 	ln -s ~/.vim/.agignore ~/.agignore
 	ln -s ~/.vim/.gitignore ~/.gitignore
+	ln -s ~/.vim/.eslintrc ~/.eslintrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim+PluginInstall
 	echo 'vim setted'
+}
+
+function reactplugin(){
+	npm install -g eslint
+	npm install -g babel-eslint
+	npm install -g eslint-plugin-react
 }
