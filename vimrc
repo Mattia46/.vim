@@ -60,6 +60,11 @@ Plugin 'alvan/vim-closetag'
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Snipmate
+Plugin 'SirVer/ultisnips'
+"In order to use tab and shift-tab to complete the snippet
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "Plugin 'MarcWeber/vim-addon-mw-utils'
 "Plugin 'tomtom/tlib_vim'
 "Plugin 'garbas/vim-snipmate'
