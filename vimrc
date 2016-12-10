@@ -1,5 +1,5 @@
 if &compatible
-  set nocompatible
+	set nocompatible
 end
 
 execute pathogen#infect()
@@ -24,7 +24,7 @@ Plugin 'gmarik/Vundle.vim'
 
 "Color Scheme
 " Like Mac xcode default
-"Plugin 'cohlin/vim-colorschemes'
+Plugin 'cohlin/vim-colorschemes'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'pbrisbin/vim-mkdir' "crei una dir con :e
@@ -40,9 +40,9 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'morhetz/gruvbox' "retro theme that I am using
 Plugin 'vim-scripts/tComment'
 " Auto align
-Plugin 'vim-scripts/vimball'
-Plugin 'vim-scripts/Align'
-Plugin 'vim-scripts/AutoAlign'
+"Plugin 'vim-scripts/vimball'
+"Plugin 'vim-scripts/Align'
+"Plugin 'vim-scripts/AutoAlign'
 
 "HTML
 Plugin 'mattn/emmet-vim'
@@ -50,9 +50,14 @@ Plugin 'alvan/vim-closetag'
 "let g:closetag_html_style=1
 
 "REACT
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'pangloss/vim-javascript', { 'for': ['javascript.jsx']  }
+"Plugin 'mxw/vim-jsx', { 'for': ['javascript.jsx']  }
+"Plugin 'othree/javascript-libraries-syntax.vim'
+"Plugin 'gavocanov/vim-js-indent'
+"Plugin 'jelera/vim-javascript-syntax'
+"let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+"let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Snipmate
 "Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -106,8 +111,7 @@ set laststatus=2  " Always shows the status line at the bottom
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=50
 set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
-set cursorline    " highlight the current line the cursor is on
+"set cursorline    " highlight the current line the cursor is on
 "set complete=.,w,b,u,t,i
 "set viminfo=
 set colorcolumn=+1
@@ -117,30 +121,29 @@ set wildmenu "Enable tab complete. First shows all matches, then starts cycling 
 
 "set viminfo=
 " Make it obvious where 80 characters is
-set textwidth=80
+set textwidth=120
 "set colorcolumn=+1
 
-"sm:    flashes matching brackets or parentheses
-set showmatch
-
 " Softtabs, 2 spaces
-"set tabstop=2
-"set shiftwidth=2
-"set shiftround
-"set expandtab
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set softtabstop=2
+set shiftround
+set expandtab
 
 "SEARCH (using AG instead of Grep)
 let g:ackprg = 'ag --vimgrep' "After installing 'brew install the_silver_searcher', this line make it works
 
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+	" Use ag over grep
+	set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+	" ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
 endif
 
 "Search the word under the cursor
@@ -172,10 +175,10 @@ autocmd FileType markdown setlocal spell
 set clipboard=unnamed
 
 augroup vimrcEx
-  autocmd!
+	autocmd!
 
-  " Allow stylesheets to autocomplete hyphenated words
-  autocmd FileType css,scss,sass setlocal iskeyword+=-
+	" Allow stylesheets to autocomplete hyphenated words
+	autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
 
 
@@ -194,14 +197,11 @@ let NERDTreeHighlightCursorline = 1
 " JJ escape
 inoremap jj <ESC>:wa<CR>
 
-"open vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-
 " Indentation
 noremap <Leader>i gg=G
 
 " Autoformat
-"map <Leader>f :Autoformat<CR>
+map <Leader>f :Autoformat<CR>
 
 " such very magic
 :nnoremap / /\v
@@ -217,12 +217,12 @@ let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will 
 
 "colorscheme hybrid
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme dark-atom-256
-"syntax enable
+syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
-"colorscheme lucius
+colorscheme lucius
 "set background=light
 
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -250,8 +250,8 @@ nnoremap <space> za
 
 " now set it up to change the status line based on mode
 "if version >= 700
-  "au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  "au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+"au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+"au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 "endif
 set runtimepath+=~/.vim/bundle/jshint2.vim/
 
@@ -271,21 +271,21 @@ au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()<esc>
 au FileType python map <silent> <leader>B Oimport ipdb; ipdb.set_trace()<esc>
 
 ""JAVASCRIPT & HTML
-"au BufNewFile,BufRead *.js, *.html, *.css set tabstop=2
-"au BufNewFile,BufRead *.js, *.html, *.css set softtabstop=2
-"au BufNewFile,BufRead *.js, *.html, *.css set shiftwidth=2
+"au BufNewFile,BufRead *.js, *.jsx, *.html, *.css set tabstop=2
+"au BufNewFile,BufRead *.js, *.jsx, *.html, *.css set softtabstop=2
+"au BufNewFile,BufRead *.js, *.jsx, *.html, *.css set shiftwidth=2
 
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
+	let col = col('.') - 1
+	if !col || getline('.')[col - 1] !~ '\k'
+		return "\<tab>"
+	else
+		return "\<c-p>"
+	endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
@@ -297,8 +297,8 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nmap <leader>T :!thyme -d<cr><cr>
 
 "PYTHON etc
-set foldmethod=indent
-set foldlevel=99
+"set foldmethod=indent
+"set foldlevel=99
 "Enable folding with the spacebar instead of 'za'
 "set fileformat=unix
 "au BufNewFile, BufRead *.py
