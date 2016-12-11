@@ -77,6 +77,7 @@ function personal(){
 	brew cask install utorrent
 	brew cask install telegram
 	brew cask install plex-home-theater
+	brew cask install amethyst
 	brew cask list
 }
 
