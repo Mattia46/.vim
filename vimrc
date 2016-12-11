@@ -60,7 +60,7 @@ Plugin 'alvan/vim-closetag'
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Snipmate
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 "In order to use tab and shift-tab to complete the snippet
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -89,6 +89,9 @@ Plugin 'scrooloose/nerdcommenter'
 "Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'yssl/QFEnter'
 "Plugin 'elzr/vim-json'
+"if $TMUX == ''
+  "set clipboard+=unnamed
+"endif
 
 
 Plugin 'sjl/vitality.vim' "Change Cursor
@@ -222,12 +225,12 @@ let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will 
 
 "colorscheme hybrid
 set background=dark
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme dark-atom-256
 syntax enable
 "let g:solarized_termcolors=256
 "colorscheme solarized
-colorscheme lucius
+"colorscheme lucius
 "set background=light
 
 set backspace=2   " Backspace deletes like most programs in insert mode
