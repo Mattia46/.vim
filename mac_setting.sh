@@ -77,6 +77,8 @@ function personal(){
 	brew cask install utorrent
 	brew cask install telegram
 	brew cask install plex-home-theater
+	brew cask install amethyst # windows manager
+	brew install reattach-to-user-namespace # for copy paste in tmux
 	brew cask list
 }
 
