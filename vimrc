@@ -119,6 +119,7 @@ set laststatus=2  " Always shows the status line at the bottom
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=50
 set incsearch     " do incremental searching
+"set hlsearch " "Highlights the searched workds. Undo :nohl
 "set cursorline    " highlight the current line the cursor is on
 "set complete=.,w,b,u,t,i
 "set viminfo=
