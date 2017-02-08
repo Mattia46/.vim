@@ -39,7 +39,7 @@ function dev(){
 	brew install tmux
 	brew install redis
 	brew install curl
-	/curl -L https://get.rvm.io | bash -s stable
+	\curl -L https://get.rvm.io | bash -s stable
 	brew cask install google-cloud-sdk
 	sudo easy_install virtualenv
 	npm install -g bower
