@@ -1,4 +1,5 @@
 if &compatible
+    r
 	set nocompatible
 end
 
@@ -30,7 +31,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'pbrisbin/vim-mkdir' "crei una dir con :e
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-eunuch' "Vim sugar like :Move, :Rename etc
-"Plugin 'tpope/vim-fugitive' "Wrap all Git commang
+Plugin 'tpope/vim-fugitive' "Wrap all Git commang
 Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
 "Plugin 'tpope/vim-unimpaired' "pair the [{(
 Plugin 'tpope/vim-surround'
@@ -134,10 +135,10 @@ set textwidth=120
 "set colorcolumn=+1
 
 " Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set autoindent
-set softtabstop=2
+set softtabstop=4
 set shiftround
 set expandtab
 
@@ -196,6 +197,16 @@ augroup END
 "nnoremap <S-Tab> <C-j>W
 "nnoremap <Tab> <C-W><C-W>
 
+"Fugitive map
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :Glog -- % copen<CR>
+"Shows the branch name for each version
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -224,18 +235,19 @@ set number "mi da il numero assuluto della linea in cui sono
 " Toggle relative line numbers
 let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will conflict with nerdTree
 
-"colorscheme hybrid
+"set t_Co=256
 set background=dark
-colorscheme gruvbox
-"colorscheme dark-atom-256
+"colorscheme gruvbox
 syntax enable
-"let g:solarized_termcolors=256
-"colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_contrast = "high"
+colorscheme solarized
 "colorscheme lucius
 "set background=light
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
+"set foldmethod=indent
 
 nnoremap <space> za
 
@@ -306,7 +318,6 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nmap <leader>T :!thyme -d<cr><cr>
 
 "PYTHON etc
-"set foldmethod=indent
 "set foldlevel=99
 "Enable folding with the spacebar instead of 'za'
 "set fileformat=unix
