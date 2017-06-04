@@ -1,5 +1,4 @@
 if &compatible
-    r
 	set nocompatible
 end
 
@@ -49,6 +48,9 @@ Plugin 'vim-scripts/tComment'
 Plugin 'mattn/emmet-vim'
 Plugin 'alvan/vim-closetag'
 "let g:closetag_html_style=1
+
+"ES6 Color
+Plugin 'isRuslan/vim-es6'
 
 "REACT
 "Plugin 'pangloss/vim-javascript', { 'for': ['javascript.jsx']  }
@@ -137,7 +139,7 @@ set textwidth=120
 " Softtabs, 2 spaces
 set tabstop=4
 set shiftwidth=4
-set autoindent
+"set autoindent
 set softtabstop=4
 set shiftround
 set expandtab
@@ -199,8 +201,11 @@ augroup END
 
 "Fugitive map
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gm :diffget //2<CR>
+nnoremap <leader>go :diffget //3<CR>
+nnoremap <leader>gu :diffupdate<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
 nnoremap <leader>gl :Glog -- % copen<CR>
@@ -247,7 +252,7 @@ colorscheme solarized
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
-"set foldmethod=indent
+"set foldmethod=indent*/
 
 nnoremap <space> za
 
@@ -285,7 +290,7 @@ au BufNewFile,BufRead *.py set softtabstop=4
 au BufNewFile,BufRead *.py set shiftwidth=4
 au BufNewFile,BufRead *.py set textwidth=119
 au BufNewFile,BufRead *.py set expandtab
-au BufNewFile,BufRead *.py set autoindent
+"au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set fileformat=unix
 
 au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()<esc>
