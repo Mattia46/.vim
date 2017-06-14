@@ -1,4 +1,5 @@
 if &compatible
+
 	set nocompatible
 end
 
@@ -240,7 +241,7 @@ set number "mi da il numero assuluto della linea in cui sono
 " Toggle relative line numbers
 let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will conflict with nerdTree
 
-"set t_Co=256
+set t_Co=256
 set background=dark
 "colorscheme gruvbox
 syntax enable
@@ -253,6 +254,10 @@ colorscheme solarized
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
 "set foldmethod=indent*/
+
+let &t_SI = "\<esc>[5 q"
+let &t_SR = "\<esc>[5 q"
+let &t_EI = "\<esc>[2 q"
 
 nnoremap <space> za
 

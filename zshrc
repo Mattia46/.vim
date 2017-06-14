@@ -21,8 +21,8 @@ alias ws4='source ~/ws3/bin/activate'
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. `brew --prefix`/etc/profile.d/z.sh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. ~/z.sh
 
 alias crypt='openssl enc -aes-256-cbc -e -in /Users/polipetta/Documents/Codici.xlsx -out ~/Desktop/codici.xlsx'
 alias codici="openssl enc -aes-256-cbc -d -in /Users/polipetta/Documents/Codici -out ~/Desktop/codici.xlsx"
