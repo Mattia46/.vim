@@ -194,6 +194,10 @@ augroup vimrcEx
 	autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
 
+"GVIM
+set guioptions -=T
+set guioptions -=r
+set guioptions -=m
 
 
 " Move between splits

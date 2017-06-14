@@ -11,6 +11,9 @@ alias gpl='git pull'
 alias sta='git status'
 alias gck='git checkout'
 
+alias vim='gvim'
+
+
 #run Python server plus migrations:
 alias runserver='./manage.py runserver 0.0.0.0:8000'
 alias migrateserver='./manage.py makemigrations ; ./manage.py migrate ; ./manage.py runserver 0.0.0.0:8000'
@@ -32,7 +35,7 @@ alias decrypt='openssl enc -aes-256-cbc -d -in'
 # TMUX
 alias tmls='tmux ls'
 alias tmat='tmux attach -t'
-alias tmn='tmux new-session -s'
+alias tmn='tmux -2 new-session -s'
 alias tmclose='tmux detach' # detach the current session leaving it open
 alias tmkill='tmux kill-session -t'
 
