@@ -91,6 +91,7 @@ function setup(){
 	brew install z
 	. `brew --prefix`/etc/profile.d/z.sh
 	touch ~/.hushlogin
+    touch ~/.z
 	git config --global user.name "Mattia46"
 	git config --global user.email "mattia.assogna@gmail.com"
 	git config --global core.autocrlf input
