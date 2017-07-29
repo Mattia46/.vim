@@ -88,6 +88,7 @@ function setup(){
 	chsh -s /usr/local/bin/zsh
 	curl -L http://install.ohmyz.sh | sh
 	cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+	brew install z
 	. `brew --prefix`/etc/profile.d/z.sh
 	touch ~/.hushlogin
 	git config --global user.name "Mattia46"
