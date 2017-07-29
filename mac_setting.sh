@@ -44,7 +44,7 @@ function dev(){
 	sudo easy_install virtualenv
 	npm install -g bower
 	npm install -g grunt-cli
-	brew cask install git
+	brew install git
 	brew cask install heroku-toolbelt
 	brew cask list
 	brew install the_silver_searcher
