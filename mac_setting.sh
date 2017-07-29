@@ -110,7 +110,7 @@ function jstest(){
 }
 
 function setvim(){
-	git clone git@github.com:Mattia46/.vim.git
+	git clone https://ithub.com:Mattia46/.vim.git ~/
 	ln -s ~/.vim/vimrc ~/.vimrc
 	ln -s ~/.vim/zshrc ~/.zshrc
 	ln -s ~/.vim/tmux.conf ~/.tmux.conf
