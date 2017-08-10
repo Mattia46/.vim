@@ -34,7 +34,6 @@ Plugin 'tpope/vim-fugitive' "Wrap all Git commang
 Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
 "Plugin 'tpope/vim-unimpaired' "pair the [{(
 Plugin 'tpope/vim-surround'
-"Plugin 'jtratner/vim-flavored-markdown' "Riconosce MD come ``` ```
 "Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'morhetz/gruvbox' "retro theme that I am using
@@ -51,6 +50,14 @@ Plugin 'alvan/vim-closetag'
 
 "ES6 Color
 Plugin 'isRuslan/vim-es6'
+
+"Markdown preview
+Plugin 'JamshedVesuna/vim-markdown-preview' "ctrl+p opens it
+let vim_markdown_preview_github=1 "serve perche' ho installato bower Grip invece di Markdown
+"augroup markdown
+    "au!
+    "au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+"augroup END
 
 "REACT
 "Plugin 'pangloss/vim-javascript', { 'for': ['javascript.jsx']  }

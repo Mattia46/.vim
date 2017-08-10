@@ -86,6 +86,7 @@ function setup(){
 	npm install -g jshint
     npm install -g serverless
 	brew install zsh
+    brew install grip
 	chsh -s /usr/local/bin/zsh
 	curl -L http://install.ohmyz.sh | sh
 	cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
