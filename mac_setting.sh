@@ -34,6 +34,7 @@ function dev(){
 	# brew install sqlite
 	# brew install sqlitebrowser
 	brew install python3
+    brew install docker
 	brew install node
 	brew install vim
 	brew install tmux
