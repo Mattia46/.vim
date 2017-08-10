@@ -84,6 +84,7 @@ function personal(){
 
 function setup(){
 	npm install -g jshint
+    npm install -g serverless
 	brew install zsh
 	chsh -s /usr/local/bin/zsh
 	curl -L http://install.ohmyz.sh | sh

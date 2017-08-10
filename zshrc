@@ -43,3 +43,10 @@ git_next() {
     PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
     git checkout $PREV
 }
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh
