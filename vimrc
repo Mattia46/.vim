@@ -60,6 +60,7 @@ let vim_markdown_preview_github=1 "serve perche' ho installato bower Grip invece
 "augroup END
 
 "REACT
+Plugin 'chemzqm/vim-jsx-improve'
 "Plugin 'pangloss/vim-javascript', { 'for': ['javascript.jsx']  }
 "Plugin 'mxw/vim-jsx', { 'for': ['javascript.jsx']  }
 "Plugin 'othree/javascript-libraries-syntax.vim'
