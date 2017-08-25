@@ -252,11 +252,17 @@ let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will 
 set background=dark
 "colorscheme gruvbox
 syntax enable
-let g:solarized_termcolors=256
-let g:solarized_contrast = "high"
-colorscheme solarized
+"let g:solarized_termcolors=256
+"let g:solarized_contrast = "high"
+"colorscheme solarized
 "colorscheme lucius
 "set background=light
+"VS CODE DARK
+Plugin 'tomasiser/vim-code-dark'
+colorscheme codedark
+let g:airline_theme = 'codedark'
+set t_Co=256
+set t_ut=
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
