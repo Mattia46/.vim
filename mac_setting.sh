@@ -31,6 +31,7 @@ function dev(){
 	brew install mysql
 	brew services start mysql
 	brew cask install mysqlworkbench
+    brew install mongodb
 	# brew install sqlite
 	# brew install sqlitebrowser
 	brew install python3

@@ -25,6 +25,7 @@ Plugin 'gmarik/Vundle.vim'
 "Color Scheme
 " Like Mac xcode default
 Plugin 'cohlin/vim-colorschemes'
+Plugin 'trevordmiller/nova-vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'pbrisbin/vim-mkdir' "crei una dir con :e
@@ -81,7 +82,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 "Plugin 'garbas/vim-snipmate'
 "Plugin 'honza/vim-snippets'
 
-"Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_flow = 1
 
 Plugin 'rking/ag.vim'
 
@@ -248,21 +250,21 @@ set number "mi da il numero assuluto della linea in cui sono
 " Toggle relative line numbers
 let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will conflict with nerdTree
 
-"set t_Co=256
+set t_Co=256
 set background=dark
 "colorscheme gruvbox
 syntax enable
-"let g:solarized_termcolors=256
-"let g:solarized_contrast = "high"
+let g:solarized_termcolors=256
+let g:solarized_contrast = "high"
+colorscheme nova
 "colorscheme solarized
 "colorscheme lucius
 "set background=light
 "VS CODE DARK
-Plugin 'tomasiser/vim-code-dark'
-colorscheme codedark
-let g:airline_theme = 'codedark'
-set t_Co=256
-set t_ut=
+"Plugin 'tomasiser/vim-code-dark'
+"colorscheme codedark
+"let g:airline_theme = 'codedark'
+"set t_ut=
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
