@@ -264,8 +264,8 @@ colorscheme nova
 "Plugin 'tomasiser/vim-code-dark'
 "colorscheme codedark
 "let g:airline_theme = 'codedark'
-"set t_ut=
-
+set t_Co=256
+set t_ut=
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
 "set foldmethod=indent*/
