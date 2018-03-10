@@ -25,30 +25,30 @@ function init(){
 function dev(){
 	echo 'dev'
 	brew cask install google-chrome
-	brew cask install google-drive
+	#brew cask install google-drive
 	brew cask install iterm2
-	brew cask install java
-	brew install mysql
-	brew services start mysql
-	brew cask install mysqlworkbench
-    brew install mongodb
+	#brew cask install java
+	#brew install mysql
+	#brew services start mysql
+	#brew cask install mysqlworkbench
+        #brew install mongodb
 	# brew install sqlite
 	# brew install sqlitebrowser
 	brew install python3
-    brew install docker
+        brew install docker
 	brew install node
 	brew install vim
 	brew install tmux
-	brew install redis
+	#brew install redis
 	brew install curl
 	\curl -L https://get.rvm.io | bash -s stable
-	brew cask install google-cloud-sdk
+	#brew cask install google-cloud-sdk
 	sudo easy_install virtualenv
-	npm install -g bower
-	npm install -g grunt-cli
+	#npm install -g bower
+	#npm install -g grunt-cli
 	brew install git
-	brew cask install heroku-toolbelt
-	brew cask list
+	#brew cask install heroku-toolbelt
+	#brew cask list
 	brew install the_silver_searcher
 	pip install ipython
 }
@@ -60,7 +60,7 @@ function utility(){
 	# brew install nmap
 	# brew install wget
 	# brew cask install istat-menus
-	brew cask install teamviewer
+	#brew cask install teamviewer
 	brew cask install spotify
 	brew cask install alfred
 	brew cask install caffeine
@@ -76,26 +76,25 @@ function personal(){
 	brew cask install skype
 	brew cask install slack
 	brew cask install vlc
-	brew cask install utorrent
+	#brew cask install utorrent
 	brew cask install telegram
-	brew cask install plex-home-theater
-	brew cask install amethyst # windows manager
+	#brew cask install plex-home-theater
+	#brew cask install amethyst # windows manager
 	brew install reattach-to-user-namespace # for copy paste in tmux
 	brew cask list
 }
 
 function setup(){
-	npm install -g jshint
-    npm install -g serverless
+	#npm install -g jshint
+        npm install -g serverless
 	brew install zsh
-    brew install grip
 	chsh -s /usr/local/bin/zsh
 	curl -L http://install.ohmyz.sh | sh
 	cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 	brew install z
 	. `brew --prefix`/etc/profile.d/z.sh
 	touch ~/.hushlogin
-    touch ~/.z
+        touch ~/.z
 	git config --global user.name "Mattia46"
 	git config --global user.email "mattia.assogna@gmail.com"
 	git config --global core.autocrlf input
