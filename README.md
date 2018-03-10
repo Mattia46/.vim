@@ -14,3 +14,4 @@ If doesn't apply the vimrc setting try cloaning vundle:
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+For Mac re-enable in .zshrc line 25
