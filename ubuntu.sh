@@ -30,6 +30,13 @@ sudo apt install tree -y
 sudo apt install telegram-desktop -y
 sudo apt install slack -y
 
+#Yarn
+sudo apt remove cmdtest
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+
 #git
 git config --global user.name "Mattia46"
 git config --global user.email "mattia.assogna@gmail.com"
