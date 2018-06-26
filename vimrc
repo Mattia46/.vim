@@ -7,7 +7,7 @@ syntax on
 filetype plugin indent on
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/Vundle.vim/
 cal vundle#begin()
 
 " Let Vundle manage Vundle
