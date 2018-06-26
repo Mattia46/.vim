@@ -42,6 +42,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 "Syntax and Indenting setting:
 "let g:jsx_ext_required = 0
 "let g:syntastic_javascript_checkers = ['eslint']
+
+"ALE syntax
 let b:ale_linters = {'javascript': ['eslint']}
 let g:airline#extensions#ale#enabled = 1
 
