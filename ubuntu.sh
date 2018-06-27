@@ -29,6 +29,7 @@ sudo apt-get install silversearcher-ag -y
 sudo apt install tree -y
 sudo apt install telegram-desktop -y
 sudo apt install slack -y
+npm -g install instant-markdown-d
 
 #Yarn
 sudo apt remove cmdtest
