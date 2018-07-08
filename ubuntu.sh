@@ -21,7 +21,7 @@ printf "\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n" >> .zshrc
 touch ~/.z
 
 #Varie
-sudo apt install vim -y
+sudo apt install vim-gtk -y
 sudo apt install git -y
 sudo apt install tmux -y
 sudo apt install curl -y
