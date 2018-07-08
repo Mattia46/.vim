@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive' "Wrap all Git commang
 Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale' "syntastic alternative
+Plugin 'vimwiki/vimwiki'
 
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
@@ -135,7 +136,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
+let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam', 'node_modules']
 "let g:NERDTreeWinSize = 4
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1
