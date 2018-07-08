@@ -105,7 +105,8 @@ nnoremap \ :Ag<SPACE>
 "END SEARCH
 
 "clipboard per copiare da vim ed incollare altrove:
-set clipboard=unnamed
+set clipboard=unnamedplus " Tmux
+"set clipboard=unnamed " Mac
 
 augroup vimrcEx
     autocmd!
