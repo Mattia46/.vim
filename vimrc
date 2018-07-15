@@ -29,7 +29,6 @@ Plugin 'vimwiki/vimwiki'
 "Plugin 'mxw/vim-jsx'
 
 Plugin 'rking/ag.vim'
-
 Plugin 'bling/vim-airline'
 
 Plugin 'roman/golden-ratio' "auto-reside the windows
@@ -39,6 +38,18 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
+
+"Change cursor linux
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' |
+    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
 "Syntax and Indenting setting:
 "let g:jsx_ext_required = 0
@@ -107,6 +118,9 @@ nnoremap \ :Ag<SPACE>
 "clipboard per copiare da vim ed incollare altrove:
 set clipboard=unnamedplus " Tmux
 "set clipboard=unnamed " Mac
+
+" Type ipb+space  Add python breakPoint
+ab ipb import ipdb; ipdb.set_trace()
 
 augroup vimrcEx
     autocmd!
