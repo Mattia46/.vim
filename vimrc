@@ -23,12 +23,12 @@ Plugin 'tpope/vim-fugitive' "Wrap all Git commang
 Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale' "syntastic alternative
+Plugin 'vimwiki/vimwiki'
 
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
 
 Plugin 'rking/ag.vim'
-
 Plugin 'bling/vim-airline'
 
 Plugin 'roman/golden-ratio' "auto-reside the windows
@@ -38,6 +38,18 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
+
+"Change cursor linux
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' |
+    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
 "Syntax and Indenting setting:
 "let g:jsx_ext_required = 0
@@ -104,7 +116,11 @@ nnoremap \ :Ag<SPACE>
 "END SEARCH
 
 "clipboard per copiare da vim ed incollare altrove:
-set clipboard=unnamed
+set clipboard=unnamedplus " Tmux
+"set clipboard=unnamed " Mac
+
+" Type ipb+space  Add python breakPoint
+ab ipb import ipdb; ipdb.set_trace()
 
 augroup vimrcEx
     autocmd!
@@ -135,7 +151,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
+let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam', 'node_modules']
 "let g:NERDTreeWinSize = 4
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1

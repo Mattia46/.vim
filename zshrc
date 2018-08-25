@@ -53,6 +53,6 @@ git_next() {
 [[ -f /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh
 
 
-#initialize Z (https://github.com/rupa/z) 
-. ~/z.sh 
+#initialize Z (https://github.com/rupa/z)
+. ~/z.sh
 

@@ -21,7 +21,7 @@ printf "\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n" >> .zshrc
 touch ~/.z
 
 #Varie
-sudo apt install vim -y
+sudo apt install vim-gtk -y
 sudo apt install git -y
 sudo apt install tmux -y
 sudo apt install curl -y
@@ -29,6 +29,7 @@ sudo apt-get install silversearcher-ag -y
 sudo apt install tree -y
 sudo apt install telegram-desktop -y
 sudo apt install slack -y
+npm -g install instant-markdown-d
 
 #Yarn
 sudo apt remove cmdtest
@@ -36,6 +37,12 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 sudo apt install yarn
+
+#Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt update
+sudo apt install google-chrome-stable
 
 #git
 git config --global user.name "Mattia46"
