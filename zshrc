@@ -22,7 +22,7 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#. `brew --prefix`/etc/profile.d/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
 
 alias crypt='openssl enc -aes-256-cbc -e -in /Users/polipetta/Documents/Codici.xlsx -out ~/Desktop/codici.xlsx'
 alias codici="openssl enc -aes-256-cbc -d -in /Users/polipetta/Documents/Codici -out ~/Desktop/codici.xlsx"
@@ -44,15 +44,4 @@ git_next() {
     PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
     git checkout $PREV
 }
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/ovetto/Development/serverlessTodos/node_modules/tabtab/.completions/sls.zsh
-
-
-#initialize Z (https://github.com/rupa/z)
-. ~/z.sh
 
