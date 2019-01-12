@@ -13,9 +13,9 @@ cal vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
-" Like Mac xcode default
 Plugin 'cohlin/vim-colorschemes'
-Plugin 'trevordmiller/nova-vim'
+Plugin 'morhetz/gruvbox'
+"Plugin 'trevordmiller/nova-vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'scrooloose/syntastic'
@@ -25,8 +25,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale' "syntastic alternative
 Plugin 'vimwiki/vimwiki'
 
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
@@ -38,22 +38,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
-
-"Change cursor linux
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-    \ if v:insertmode == 'i' |
-    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
-    \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
-
-"Syntax and Indenting setting:
-"let g:jsx_ext_required = 0
-"let g:syntastic_javascript_checkers = ['eslint']
 
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint']}
@@ -122,14 +106,6 @@ set clipboard=unnamedplus " Tmux
 " Type ipb+space  Add python breakPoint
 ab ipb import ipdb; ipdb.set_trace()
 
-augroup vimrcEx
-    autocmd!
-
-    " Allow stylesheets to autocomplete hyphenated words
-    autocmd FileType css,scss,sass setlocal iskeyword+=-
-augroup END
-
-
 
 " Move between splits
 "nnoremap <S-Tab> <C-j>W
@@ -181,7 +157,7 @@ let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will 
 "set t_ut=
 set t_Co=256
 syntax enable
-colorscheme nova
+colorscheme gruvbox 
 set background=dark
 
 set backspace=2   " Backspace deletes like most programs in insert mode
