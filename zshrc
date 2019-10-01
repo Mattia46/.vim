@@ -37,6 +37,8 @@ alias tmn='tmux new-session -s'
 alias tmclose='tmux detach' # detach the current session leaving it open
 alias tmkill='tmux kill-session -t'
 
+alias ports='lsof -nP -iTCP:8080 | grep LISTEN'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 git_next() {
     BRANCH=`git show-ref | grep $(git show-ref -s -- HEAD) | sed 's|.*/\(.*\)|\1|' | grep -v HEAD | sort | uniq`
@@ -45,3 +47,7 @@ git_next() {
     git checkout $PREV
 }
 
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
+#vi in bash
+set -o vi

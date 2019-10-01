@@ -1,5 +1,4 @@
 if &compatible
-
 end
 
 execute pathogen#infect()
@@ -27,6 +26,7 @@ Plugin 'vimwiki/vimwiki'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
 
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
@@ -40,7 +40,7 @@ Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
 
 "ALE syntax
-let b:ale_linters = {'javascript': ['eslint']}
+let b:ale_linters = {'javascript': ['eslint', 'tslint']}
 let g:airline#extensions#ale#enabled = 1
 
 call vundle#end()
