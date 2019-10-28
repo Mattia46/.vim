@@ -37,7 +37,8 @@ alias tmn='tmux new-session -s'
 alias tmclose='tmux detach' # detach the current session leaving it open
 alias tmkill='tmux kill-session -t'
 
-alias ports='lsof -nP -iTCP:8080 | grep LISTEN'
+alias port8080='lsof -nP -iTCP:8080 | grep LISTEN'
+alias port1337='lsof -nP -iTCP:1337 | grep LISTEN'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 git_next() {
@@ -48,6 +49,8 @@ git_next() {
 }
 
 export PATH="/usr/local/opt/node@8/bin:$PATH"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 #vi in bash
 set -o vi
