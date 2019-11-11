@@ -86,7 +86,7 @@ nnoremap <leader>md :InstantMarkdownPreview<CR>
 let g:vimwiki_ext2syntax = { '.md': 'markdown' }
 
 "vimWiki folders. Called them via number<leader>ww
-let g:vimwiki_list = [{'path': '~/Desktop/Notes/Personal', 'path_html': '~/Desktop/Notes/Personal/html/',  'ext': '.md', 'custom_wiki2html': '~/Desktop/wiki.sh'}, {'path': '~/Desktop/Notes/DAZN', 'path_html': '~/Desktop/Notes/DAZN/html/',  'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/.Notes/Personal', 'path_html': '~/.Notes/Personal/html/',  'ext': '.md'}, {'path': '~/.Notes/DAZN', 'path_html': '~/.Notes/DAZN/html/',  'ext': '.md'}]
 
 
 "SEARCH (using AG instead of Grep)
