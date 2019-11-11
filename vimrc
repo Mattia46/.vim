@@ -39,6 +39,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
 
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
 let g:airline#extensions#ale#enabled = 1
@@ -75,6 +77,17 @@ set softtabstop=4
 "set smarttab
 "set shiftround
 set expandtab
+
+"Markdown Preview & vimWiki
+let g:instant_markdown_autostart = 0
+nnoremap <leader>md :InstantMarkdownPreview<CR>
+
+"ext associated to vimwiki
+let g:vimwiki_ext2syntax = { '.md': 'markdown' }
+
+"vimWiki folders. Called them via number<leader>ww
+let g:vimwiki_list = [{'path': '~/Desktop/Notes/Personal', 'path_html': '~/Desktop/Notes/Personal/html/',  'ext': '.md', 'custom_wiki2html': '~/Desktop/wiki.sh'}, {'path': '~/Desktop/Notes/DAZN', 'path_html': '~/Desktop/Notes/DAZN/html/',  'ext': '.md'}]
+
 
 "SEARCH (using AG instead of Grep)
 let g:ackprg = 'ag --vimgrep' "After installing 'brew install the_silver_searcher', this line make it works

@@ -37,6 +37,7 @@ function dev(){
 	brew install node
 	brew install vim
 	brew install tmux
+        brew install pandoc
 	#brew install redis
 	brew install curl
 	\curl -L https://get.rvm.io | bash -s stable
