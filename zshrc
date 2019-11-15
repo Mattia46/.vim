@@ -40,6 +40,10 @@ alias tmkill='tmux kill-session -t'
 alias port8080='lsof -nP -iTCP:8080 | grep LISTEN'
 alias port1337='lsof -nP -iTCP:1337 | grep LISTEN'
 
+# Sync Notes
+alias sync='cd ~/.Notes; gpl origin master;'
+alias update='cd ~/.vim/scripts; ./updateNotes.sh'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 git_next() {
     BRANCH=`git show-ref | grep $(git show-ref -s -- HEAD) | sed 's|.*/\(.*\)|\1|' | grep -v HEAD | sort | uniq`
