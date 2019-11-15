@@ -86,7 +86,7 @@ nnoremap <leader>md :InstantMarkdownPreview<CR>
 let g:vimwiki_ext2syntax = { '.md': 'markdown' }
 
 "vimWiki folders. Called them via number<leader>ww
-let g:vimwiki_list = [{'path': '~/.Notes/Personal', 'path_html': '~/.Notes/Personal/html/',  'ext': '.md'}, {'path': '~/.Notes/DAZN', 'path_html': '~/.Notes/DAZN/html/',  'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/.Notes/Personal', 'path_html': '~/.Notes/Personal/html/',  'ext': '.md'}, {'path': '~/.Notes/DAZN', 'path_html': '~/.Notes/DAZN/html/',  'ext': '.md'}, {'path': '~/.Notes/AWS', 'path_html': '~/.Notes/AWS/html/',  'ext': '.md'}]
 
 
 "SEARCH (using AG instead of Grep)
@@ -144,6 +144,9 @@ let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam', 'node_modules']
 "let g:NERDTreeWinSize = 4
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1
+
+" Folding binding
+nnoremap <leader>ff v}zf<CR>
 
 " JJ escape
 inoremap jj <ESC>:wa<CR>
