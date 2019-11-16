@@ -33,8 +33,7 @@ alias tmkill='tmux kill-session -t'
 alias port='~/.vim/scripts/showOpenPorts.sh'
 
 # Sync Notes
-alias sync='cd ~/.Notes; gpl origin master;'
-alias update='cd ~/.vim/scripts; ./updateNotes.sh'
+alias sync='cd ~/.vim/scripts; ./updateNotes.sh'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
