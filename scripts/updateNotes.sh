@@ -24,7 +24,6 @@ updateRepo() {
             case $yn in
                 Yes ) echo "Commit message?";
                       read line;
-                      echo $line
                       git add .;
                       git commit -m "$line";
                       git pull origin master
