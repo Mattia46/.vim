@@ -23,9 +23,10 @@ updateRepo() {
         select yn in "Yes" "No"; do
             case $yn in
                 Yes ) echo "Commit message?";
-                      read msg;
+                      read line;
+                      echo $line
                       git add .;
-                      git commit -m $msg;
+                      git commit -m "$line";
                       git pull origin master
                       git push origin master
                       break;;
@@ -35,4 +36,4 @@ updateRepo() {
     fi
 }
 updateRepo ~/.vim
-#updateRepo ~/.Notes
+updateRepo ~/.Notes
