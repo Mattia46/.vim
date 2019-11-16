@@ -11,13 +11,6 @@ alias gpl='git pull'
 alias sta='git status'
 alias gck='git checkout'
 
-#run Python server plus migrations:
-alias runserver='./manage.py runserver 0.0.0.0:8000'
-alias migrateserver='./manage.py makemigrations ; ./manage.py migrate ; ./manage.py runserver 0.0.0.0:8000'
-alias pipmigrateserver='pip install -R requirements/common.txt ; ./manage.py makemigrations ; ./manage.py migrate ; ./manage.py runserver 0.0.0.0:8000'
-alias ws3='source ~/Development/envs/ws3/bin/activate'
-alias ws4='source ~/ws3/bin/activate'
-
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -37,20 +30,13 @@ alias tmn='tmux new-session -s'
 alias tmclose='tmux detach' # detach the current session leaving it open
 alias tmkill='tmux kill-session -t'
 
-alias port8080='lsof -nP -iTCP:8080 | grep LISTEN'
-alias port1337='lsof -nP -iTCP:1337 | grep LISTEN'
+alias port='~/.vim/scripts/showOpenPorts.sh'
 
 # Sync Notes
 alias sync='cd ~/.Notes; gpl origin master;'
 alias update='cd ~/.vim/scripts; ./updateNotes.sh'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-git_next() {
-    BRANCH=`git show-ref | grep $(git show-ref -s -- HEAD) | sed 's|.*/\(.*\)|\1|' | grep -v HEAD | sort | uniq`
-    HASH=`git rev-parse $BRANCH`
-    PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
-    git checkout $PREV
-}
 
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

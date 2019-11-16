@@ -28,6 +28,7 @@ function dev(){
 	brew install unrar
 	brew install tree
 	npm -g install instant-markdown-d
+	npm -g install tldr # Alternative to man
 }
 
 function caskModules() {
