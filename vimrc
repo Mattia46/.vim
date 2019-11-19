@@ -22,7 +22,10 @@ Plugin 'tpope/vim-fugitive' "Wrap all Git commang
 Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale' "syntastic alternative
+
+" Notes
 Plugin 'vimwiki/vimwiki'
+Plugin 'mattn/calendar-vim'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'

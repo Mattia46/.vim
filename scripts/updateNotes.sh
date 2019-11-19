@@ -5,7 +5,7 @@ source ./colors.sh
 updateRepo() {
     cd $1
     LAST=$(pwd | sed 's/\/home\/mattia\///g')
-    echo $YELLOW $LAST $Color_Off
+    echo $YELLOW $White $LAST $Color_Off
     STAGED=$(git diff --name-only --cached)
     UNSTAGED=$(git ls-files -o -m)
     if [[ -z $STAGED ]] && [[ -z $UNSTAGED ]]; then
