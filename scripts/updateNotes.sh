@@ -34,5 +34,5 @@ updateRepo() {
         done
     fi
 }
-updateRepo ~/.vim
 updateRepo ~/.Notes
+updateRepo ~/.vim
