@@ -90,7 +90,8 @@ let g:vimwiki_ext2syntax = { '.md': 'markdown' }
 
 "vimWiki folders. Called them via number<leader>ww
 let g:vimwiki_list = [{'path': '~/.Notes/Personal', 'path_html': '~/.Notes/Personal/html/',  'ext': '.md'}, {'path': '~/.Notes/DAZN', 'path_html': '~/.Notes/DAZN/html/',  'ext': '.md'}, {'path': '~/.Notes/AWS', 'path_html': '~/.Notes/AWS/html/',  'ext': '.md'}]
-
+"let g:vimwiki_listsyms = ' ✗○◐●✓'
+let g:vimwiki_table_mappings=0
 
 "SEARCH (using AG instead of Grep)
 let g:ackprg = 'ag --vimgrep' "After installing 'brew install the_silver_searcher', this line make it works
