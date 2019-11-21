@@ -43,6 +43,7 @@ Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'hashivim/vim-terraform.git' "Terraform syntax highlight
 
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
