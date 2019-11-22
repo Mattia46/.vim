@@ -27,8 +27,9 @@ function dev(){
 	brew install reattach-to-user-namespace # for copy paste in tmux
 	brew install unrar
 	brew install tree
-	npm -g install instant-markdown-d
-	npm -g install tldr # Alternative to man
+	npm i -g instant-markdown-d
+        npm i -g @aws-amplify/cli
+	npm i -g tldr # Alternative to man
 }
 
 function caskModules() {
