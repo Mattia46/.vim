@@ -7,7 +7,8 @@ updateRepo() {
     LAST=$(pwd | sed 's/\/home\/mattia\///g')
     echo $YELLOW $White $LAST $Color_Off
     STAGED=$(git diff --name-only --cached)
-    UNSTAGED=$(git ls-files -o -m)
+    UNSTAGED=$(git ls-files -o -m --exclude-standard)
+    echo $UNSTAGED
     if [[ -z $STAGED ]] && [[ -z $UNSTAGED ]]; then
         echo "$Green Working tree clean "
         echo ""
