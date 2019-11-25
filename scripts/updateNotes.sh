@@ -39,4 +39,4 @@ WORKSPACE=$(pwd)
 echo $WORKSPACE
 updateRepo ~/.Notes
 updateRepo ~/.vim
-cd WORKSPACE;
+cd $WORKSPACE;
