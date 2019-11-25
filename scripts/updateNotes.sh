@@ -35,5 +35,8 @@ updateRepo() {
         done
     fi
 }
+WORKSPACE=$(pwd)
+echo $WORKSPACE
 updateRepo ~/.Notes
 updateRepo ~/.vim
+cd WORKSPACE;
