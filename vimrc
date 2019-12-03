@@ -118,8 +118,8 @@ nnoremap \ :Ag<SPACE>
 "END SEARCH
 
 "clipboard per copiare da vim ed incollare altrove:
-"set clipboard=unnamedplus " Tmux
-set clipboard=unnamed " Mac
+set clipboard=unnamedplus " Tmux
+"set clipboard=unnamed " Mac
 
 " Type ipb+space  Add python breakPoint
 ab ipb import ipdb; ipdb.set_trace()
