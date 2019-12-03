@@ -118,11 +118,10 @@ nnoremap \ :Ag<SPACE>
 "END SEARCH
 
 "clipboard per copiare da vim ed incollare altrove:
-if has('unix')
-    echo "CIAO LINUX"
-    set clipboard=unnamedplus " Tmux
+if ($uname == 'Linux')
+    set clipboard=unnamedplus
 else
-    set clipboard=unnamed " Mac
+    set clipboard=unnamed
 endif
 
 " Type ipb+space  Add python breakPoint
