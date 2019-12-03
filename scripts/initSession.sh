@@ -3,8 +3,9 @@
 source ./colors.sh
 
 echo 'Here'
-tmux new-session -s mattia &
-cd ~/.vim/scripts; ./updateNotes.sh
+
+
+tmux new-session -s mattia 'cd ~/.vim/scripts; ./updateNotes.sh'
 wait
 echo 'ciao'
 
