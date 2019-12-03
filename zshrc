@@ -34,6 +34,7 @@ alias port='~/.vim/scripts/showOpenPorts.sh'
 
 # Sync Notes
 alias sync='cd ~/.vim/scripts; ./updateNotes.sh'
+alias init='cd ~/.vim/scripts; ./initSession.sh'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
