@@ -183,7 +183,7 @@ let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will 
 "set t_ut=
 set t_Co=256
 syntax enable
-colorscheme gruvbox 
+colorscheme gruvbox
 set background=dark
 
 set backspace=2   " Backspace deletes like most programs in insert mode
