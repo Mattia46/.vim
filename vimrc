@@ -48,6 +48,8 @@ Plugin 'hashivim/vim-terraform.git' "Terraform syntax highlight
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
 let g:airline#extensions#ale#enabled = 1
+"let g:ale_open_list = 1
+"let g:ale_list_window_size = 5
 
 call vundle#end()
 filetype on
