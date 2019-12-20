@@ -36,6 +36,9 @@ alias port='~/.vim/scripts/showOpenPorts.sh'
 alias sync='cd ~/.vim/scripts; ./updateNotes.sh'
 alias init='cd ~/.vim/scripts; ./initSession.sh'
 
+# Audio Linux
+alias audio='pavucontrol'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="/usr/local/opt/node@8/bin:$PATH"
