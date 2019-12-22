@@ -15,7 +15,7 @@ chsh -s $(which zsh)
 sudo curl -L http://install.ohmyz.sh | sh
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 rm ~/.zshrc
-mv ~/Dropbox/zshrc ~/.zshrc
+ln -s ~/.vim/zshrc ~/.zshrc
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 printf "\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n" >> .zshrcsource ~/.zshrc
 touch ~/.z
