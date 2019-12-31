@@ -28,7 +28,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'mattn/calendar-vim'
 
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+"Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 
 Plugin 'rking/ag.vim'
@@ -77,7 +77,7 @@ set wildmenu "Enable tab complete. First shows all matches, then starts cycling 
 set textwidth=100
 
 "INDENTATION
-"set tabstop=4
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 "set smarttab
