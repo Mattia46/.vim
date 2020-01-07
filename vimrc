@@ -45,6 +45,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'hashivim/vim-terraform.git' "Terraform syntax highlight
 
+"Jsonnet syntax
+Plugin 'google/vim-jsonnet'
+
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
 let g:airline#extensions#ale#enabled = 1
