@@ -153,7 +153,8 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam', 'node_modules']
+"autocmd VimEnter * if &filetype !=# 'pullrequest' && &filetype != 'gitcommit' | NERDTree | wincmd p | endif
+let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', 'node_modules']
 "let g:NERDTreeWinSize = 4
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1
@@ -212,3 +213,4 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "NEW STUFF FROM A VIDEO TALK
 set path+=**
 
+autocmd BufWritePre * :%s/\s\+$//e "removes trailing white space on save
