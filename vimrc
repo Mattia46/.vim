@@ -1,5 +1,4 @@
-if &compatible
-end
+set nocompatible              " be iMproved, required
 
 execute pathogen#infect()
 syntax on
@@ -10,7 +9,7 @@ set rtp+=~/.vim/Vundle.vim/
 cal vundle#begin()
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'cohlin/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
@@ -27,9 +26,9 @@ Plugin 'w0rp/ale' "syntastic alternative
 Plugin 'vimwiki/vimwiki'
 Plugin 'mattn/calendar-vim'
 
-Plugin 'pangloss/vim-javascript'
-"Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
+" Syntax and Highlight
+Plugin 'yuezk/vim-js'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
@@ -43,19 +42,15 @@ Plugin 'sjl/vitality.vim' "Change Cursor
 Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'hashivim/vim-terraform.git' "Terraform syntax highlight
 
-"Jsonnet syntax
-Plugin 'google/vim-jsonnet'
+call vundle#end()
+filetype plugin indent on
 
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
 let g:airline#extensions#ale#enabled = 1
 "let g:ale_open_list = 1
 "let g:ale_list_window_size = 5
-
-call vundle#end()
-filetype on
 
 " Change <Leader>
 let mapleader = ","
@@ -80,7 +75,7 @@ set wildmenu "Enable tab complete. First shows all matches, then starts cycling 
 set textwidth=100
 
 "INDENTATION
-set tabstop=4
+set tabstop=2
 set shiftwidth=4
 set softtabstop=4
 "set smarttab
