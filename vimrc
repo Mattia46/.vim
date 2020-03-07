@@ -80,9 +80,9 @@ set wildmenu "Enable tab complete. First shows all matches, then starts cycling 
 set textwidth=100
 
 "INDENTATION
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 "set smarttab
 "set shiftround
 set expandtab
